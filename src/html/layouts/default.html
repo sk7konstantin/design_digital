@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{'css/style.min.css' if link_page == 'Main' else '../css/style.min.css'}}">
+  <title>{{ title }}</title>
+</head>
+
+<body class="{{'page background background--main' if link_page == 'Main' else 'page background background--other'}}">
+
+  <!-- HEADER -->
+  {% include '../partials/header.html' %}
+  <!-- HEADER END -->
+
+  <main>
+      {% block main %}
+      {% endblock%}
+  </main>
+
+  <!-- FOOTER -->
+  {% include '../partials/footer.html' %}
+  <!-- FOOTER END -->
+
+</body>
+</html>

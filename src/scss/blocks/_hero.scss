@@ -1,0 +1,47 @@
+.hero {
+    
+    &__title {
+        font-size: 96px;
+        line-height: 110px;
+        font-weight: 400;
+        color: #fff;
+        text-shadow: 0 0 10px black;
+        letter-spacing: 0.2px;
+        padding: 0;
+        margin: 0 0 24px 0;
+    }
+
+    &__description {
+        font-size: 17px;
+        line-height: 25px;
+        font-weight: 300;
+        color: #fff;
+        padding: 0;
+        margin: 0 0 71px 0;
+    }
+
+    &__buttons {
+        display: flex;
+        gap: 24px;
+    }
+
+    &__button {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-size: 21px;
+        line-height: 24px;
+        font-weight: 700;
+        padding: 19px 40px;
+
+        &-order {
+            background-color: $dark-green;
+            border-color: $dark-green;
+        }
+    }
+}
+
+.container-hero {
+    background-color: rgba(73, 142, 245, 0.4); // TEMP VALUE
+    margin: 0 56px;
+}

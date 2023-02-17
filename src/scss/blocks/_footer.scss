@@ -1,0 +1,30 @@
+.footer {
+    &__container {
+        background-color: rgba(88, 145, 35, 0.5);
+        display: grid;
+        grid-auto-flow: row;
+        grid-template-columns: min-content 1fr;
+    }
+
+    &__social {
+        display: flex;
+        gap: 12px;
+        background-color: rgba(214, 162, 64, 0.5);
+
+        span {
+            display: none;
+        }
+    }
+
+    &__scroll {
+        margin: 0 auto;
+        background-color: rgba(214, 162, 64, 0.5);
+
+        a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+        }
+    }
+}

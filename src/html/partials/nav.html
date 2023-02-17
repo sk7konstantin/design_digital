@@ -1,0 +1,27 @@
+<nav class="header__navigation navigation">
+
+    <button class="navigation__button-menu">Меню</button>
+
+    <ul class="navigation__list">
+        <li class="navigation__item navigation__item--intro">
+            <a class="header__link" href="{{ 'pages/product.html' if link_page == 'Main' else 'product.html' }}">О
+                продукте</a>
+        </li>
+        <li class="navigation__item">
+            <a class="header__link" href="{{ 'pages/how_work.html' if link_page == 'Main' else 'how_work.html' }}">Как
+                работает</a>
+        </li>
+        <li class="navigation__item">
+            <a class="navigation__link"
+                href="{{ 'pages/technology.html' if link_page == 'Main' else 'technology.html' }}">Технология</a>
+        </li>
+        <li class="navigation__item">
+            <a class="navigation__link"
+                href="{{ 'pages/questions.html' if link_page == 'Main' else 'questions.html' }}">Вопросы</a>
+        </li>
+        <li class="navigation__item">
+            <a class="navigation__link"
+                href="{{ 'pages/contacts.html' if link_page == 'Main' else 'contacts.html' }}">Контакты</a>
+        </li>
+    </ul>
+</nav>

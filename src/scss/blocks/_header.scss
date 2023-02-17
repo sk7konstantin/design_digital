@@ -1,0 +1,53 @@
+.header {
+  background-color: rgba(238, 169, 66, 0.6); //TEMP VALUE
+  margin-top: 43px;
+  margin-bottom: 153px;
+
+  &__container {
+    display: grid;
+    grid-template-columns: 200px 1fr 255px;
+    gap: 6.8%;
+    max-width: 1238px;
+    margin: 0 auto;
+
+    @media (max-width: 1226px) {
+      gap: 30px;
+    }
+  }
+
+  &__logo {
+    display: flex;
+  }
+
+  &__link {
+    display: inline-block;
+  }
+
+  &__order {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    background-color: rgba(121, 26, 26, 0.6); //TEMP VALUE
+
+  }
+
+  &__contacts-mobile {
+    display: none;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(121, 26, 26, 0.6); //TEMP VALUE
+
+  &__link-text {
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+}

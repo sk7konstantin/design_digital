@@ -1,0 +1,16 @@
+.button {
+    // width: 108px;
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700px;
+    text-transform: uppercase;
+    border: 2px solid $light-green;
+    border-radius: 2px;
+    background-color: transparent;
+    color: #fff;
+    padding: 9px 15px;
+
+    &:hover {
+        background-color: $light-green;
+    }
+}

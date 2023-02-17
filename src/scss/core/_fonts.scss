@@ -1,0 +1,51 @@
+@font-face {
+    font-family: "Ubuntu", sans-serif;
+    src: url('../fonts/Ubuntu-Light.ttf') format('ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu", sans-serif;
+    src: url('../fonts/Ubuntu-LightItalic.ttf') format('ttf');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu", sans-serif;
+    src: url('../fonts/Ubuntu-Medium.ttf') format('ttf');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu", sans-serif;
+    src: url('../fonts/Ubuntu-MediumItalic.ttf') format('ttf');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu", sans-serif;
+    src: url('../fonts/Ubuntu-Bold.ttf') format('ttf');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Ubuntu", sans-serif;
+    src: url('../fonts/Ubuntu-BoldItalic.ttf') format('ttf');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+

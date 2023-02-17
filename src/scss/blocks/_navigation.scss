@@ -1,0 +1,42 @@
+.navigation {
+    margin: auto 0;
+
+    &__button-menu {
+        display: none;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;  
+        gap: $gap-navitaion-item;
+    }
+
+    &__item {
+        a {
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+    }
+
+    &__item:has(~ .navigation__item) {
+        position: relative;
+        &::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            background-color: #B0ACAC;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            right: -22px;
+            transform: translateY(-50%);
+
+        }
+        @media (max-width: 1118px) {
+            &::after {
+                display: none;
+            }
+        }
+    }
+}
