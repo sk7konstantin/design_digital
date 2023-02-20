@@ -1,0 +1,72 @@
+.slider {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 130px;
+
+    &__title {
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        font-size: 24px;
+        line-height: 28px;
+        font-weight: 500;
+        width: 200px;
+        padding: 0;
+        transform: translateX(-85%);
+        text-align: right;
+        color: #fff;
+        z-index: 2;
+    }
+
+    &__box {
+        position: relative;
+        height: 300px;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            top: -15px;
+            right: -20px;
+            width: 100%;
+            height: 280px;
+            border: 4px solid $light-green;
+        }
+    }
+
+    &__buttons {
+        margin-left: auto;
+        font-size: 0;
+    }
+
+    &__button {
+        position: relative;
+        width: 60px;
+        height: 48px;
+        border: none;
+        background-color: #1C1C1C;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 9px;
+            height: 16px;
+            background: url('../img/arrow.svg') no-repeat;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        &--next {
+            &::before {
+                background: url('../img/arrow-next.svg');
+            }
+        }
+
+        &:hover {
+            opacity: 0.85;
+        }
+    }
+}

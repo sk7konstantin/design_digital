@@ -1,0 +1,27 @@
+.product {
+
+    &__container {
+        padding: 0 27px;
+        margin-top: 76px;
+        background-color: rgba(243, 72, 72, 0.3); // TMP VALUE
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 57px 29px 0 29px;
+        background-color: rgba(49, 110, 14, 0.3); // TMP VALUE
+    }
+
+    &__title {
+        // margin-bottom: 57px;
+    }
+
+    &__description {
+        font-size: 17px;
+        line-height: 1.5em;
+        font-weight: 300;
+        color: #fff;
+        max-width: 450px;
+    }
+}
