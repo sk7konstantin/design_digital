@@ -1,14 +1,12 @@
 .hero {
+
+    &__container {
+        background-color: rgba(73, 142, 245, 0.4); // TEMP VALUE
+        margin: 153px 56px 0 56px;
+    }
     
     &__title {
-        font-size: 96px;
-        line-height: 110px;
-        font-weight: 400;
-        color: #fff;
-        text-shadow: 0 0 10px black;
-        letter-spacing: 0.2px;
-        padding: 0;
-        margin: 0 0 24px 0;
+        margin-bottom: 24px;
     }
 
     &__description {
@@ -39,9 +37,4 @@
             border-color: $dark-green;
         }
     }
-}
-
-.container-hero {
-    background-color: rgba(73, 142, 245, 0.4); // TEMP VALUE
-    margin: 0 56px;
 }

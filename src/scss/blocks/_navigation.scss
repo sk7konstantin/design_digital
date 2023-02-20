@@ -1,5 +1,6 @@
 .navigation {
     margin: auto 0;
+    width: 51%;
 
     &__button-menu {
         display: none;
@@ -7,9 +8,11 @@
 
     &__list {
         display: flex;
-        justify-content: space-between;
         flex-wrap: wrap;  
-        gap: $gap-navitaion-item;
+
+        @media (max-width: 1183px) {
+            row-gap: 10px;
+        }
     }
 
     &__item {
@@ -21,6 +24,8 @@
 
     &__item:has(~ .navigation__item) {
         position: relative;
+        margin-right: $gap-navitaion-item;
+
         &::after {
             content: '';
             width: 6px;
@@ -35,7 +40,7 @@
         }
         @media (max-width: 1118px) {
             &::after {
-                display: none;
+                // display: none;
             }
         }
     }
