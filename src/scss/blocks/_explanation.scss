@@ -1,0 +1,57 @@
+.explanation {
+    margin-top: 76px;
+
+    &__title {
+        margin-bottom: 55px;
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        // justify-content: space-between;
+    }                     
+    
+    &__item {
+        position: relative;
+        margin-bottom: 90px;
+
+        &:nth-child(1),
+        &:nth-child(3) {
+            .card__title {
+                &::after {
+                    content: '';
+                    position: absolute;
+                    top: 5px;
+                    right: -55px;
+                    background: url('../img/dashed-1.svg');
+                    width: 247px;
+                    height: 47px;
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transform: translate(-100%, 120%);
+                background: url('../img/dashed-2.svg');
+                width: 463px;
+                height: 63px;
+            }
+        }
+    }
+    
+    &__item:nth-child(2n) {
+        margin-left: 58px;
+        .card__img {
+            margin-top: 20px;
+        }
+    }
+
+    &__item:nth-child(3) {
+        margin-left: 22px;
+    }
+}

@@ -4,6 +4,11 @@
     height: 100vh;
 }
 
-.main {
-    // display: flex;
+.background {
+    background: #000 url('../img/bg_hero.png') no-repeat;
+    background-size: cover;
+
+    &--other {
+        background-image: url('../img/bg_other.png');
+    }
 }
