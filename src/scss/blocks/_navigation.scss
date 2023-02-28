@@ -4,18 +4,100 @@
 
     &__button-menu {
         display: none;
+
+        &--mobile {
+            position: relative;
+            width: 24px;
+            height: 19px;
+            background-color: transparent;
+            opacity: 0.5;
+            border: none;
+            transition: opacity 0.4s ease;
+            
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 70%;
+                height: 2px;
+                background-color: #E0E0E0;
+                transition: width 0.25s ease-in-out;
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                width: 70%;
+                height: 2px;
+                background-color: #E0E0E0;
+                transition: width 0.35s ease-in-out;
+            }
+
+            &:hover {
+                opacity: 1;
+
+                &::after,
+                &::before {
+                    width: 100%;
+                }
+            }
+
+
+            span {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 0;
+                width: 100%;
+                height: 2px;
+                background-color: #E0E0E0;
+            }
+
+        }
+
+        @media (max-width: $brekpoint_1) {
+            display: block;
+        }
     }
 
     &__list {
         display: flex;
         flex-wrap: wrap;  
 
-        @media (max-width: 1183px) {
+        @media (max-width: 1247px) {
             row-gap: 10px;
+        }
+
+        @media (max-width: $brekpoint_1) {
+            display: none;
         }
     }
 
     &__item {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            transform: translateY(100%);
+            width: 0;
+            height: 2px;
+            background-color: $light-green;
+            transition: all 0.5s;
+        }
+
+        &:hover::before {
+            width: 100%;
+            left: 0;
+            right: auto;
+        }
+
         a {
             text-transform: uppercase;
             text-decoration: none;
@@ -38,10 +120,9 @@
             transform: translateY(-50%);
 
         }
-        @media (max-width: 1118px) {
-            &::after {
-                // display: none;
-            }
-        }
+    }
+
+    @media (max-width: $brekpoint_1) {
+        width: auto;
     }
 }

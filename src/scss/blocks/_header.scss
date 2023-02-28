@@ -1,46 +1,76 @@
 .header {
-  // margin-bottom: 153px;
-  
-  &__container {
-    background-color: rgba(238, 169, 66, 0.6); //TEMP VALUE
-    display: flex;
-    justify-content: space-between;
-    max-width: 1238px;
-    margin: 0 auto;
-    margin-top: 43px;
-  }
 
-  &__logo {
-    display: flex;
-  }
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 43px;
 
-  &__link {
-    display: inline-block;
-  }
+        @media (max-width: $brekpoint_1) {
+            margin-top: 22px;
+        }
+    }
 
-  &__order {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    font-size: 16px;
-    background-color: rgba(121, 26, 26, 0.6); //TEMP VALUE
+    &__logo {
+        display: flex;
+        align-items: center;
+        column-gap: 15px;
+        font-size: 18px;
+        text-transform: uppercase;
+        
+        path {
+            transition: all 0.35s ease;
+        }
 
-  }
+        &:hover {
+            path {
+                fill: $dark-green;
+            }
+        }
+    }
 
-  &__contacts-mobile {
-    display: none;
-  }
+    &__navigation {
+
+        @media (max-width: $brekpoint_1) {
+            order: 1;
+        }
+    }
+
+    &__link {
+        display: inline-block;
+    }
+
+    &__order {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        font-size: 16px;
+
+        a {
+
+            @media (max-width: $brekpoint_1) {
+                display: none;
+            }
+        }
+
+    }
+
+    &__contacts-mobile {
+        display: none;
+    }
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  background-color: rgba(121, 26, 26, 0.6); //TEMP VALUE
+    display: flex;
+    align-items: center;
+    gap: 15px;
 
-  &__link-text {
-    font-size: 18px;
-    text-transform: uppercase;
-  }
+    &__link-text {
+        font-size: 18px;
+        text-transform: uppercase;
+
+        @media (max-width: $brekpoint_1) {
+            display: none;
+        }
+    }
 }

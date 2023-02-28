@@ -1,0 +1,101 @@
+.technology {
+    margin-top: 76px;
+
+    &__title {
+        margin-bottom: 79px;
+    }
+
+    &__wrapper {
+        position: relative;
+        margin: 0 29px;
+        max-width: 1114px;
+    }
+
+    &__image-main {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        top: 50%;
+        left: 50%;
+        width: 408px;
+        height: 408px;
+        transform: translate(-50%, -50%);
+        background: #fff;
+        border-radius: 50%;
+    }
+
+    &__image-button {
+        position: absolute;
+        bottom: 10px;
+        right: 20px;
+        width: 85px;
+        height: 85px;
+        border: none;
+        border-radius: 50%;
+        background-color: $dark-green;
+        background-image: url('../img/plus.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &__slider-box {
+        justify-content: space-between;
+        column-gap: 200px;
+        row-gap: 60px;
+        width: 100%;
+        max-height: 580px;
+    }
+
+    &__item {
+        max-width: 280px;
+    }
+
+    &__item-img {
+        display: none;
+    }
+
+    &__item-title {
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            transform: translate(60%, 10%);
+            width: 181px;
+            height: 114px;
+            background: url('../img/vector-1.png') no-repeat;
+        }
+
+        &--2::after {
+            left: 0;
+            width: 245px;
+            height: 97px;
+            transform: translate(-100%, 10%);
+            background: url('../img/vector-2.png') no-repeat;
+        }
+
+        &--3::after {
+            right: 0;
+            width: 409px;
+            height: 82px;
+            transform: translate(70%, -80%);
+            background: url('../img/vector-3.png') no-repeat;
+        }
+
+        &--4::after {
+            left: 0;
+            width: 123px;
+            height: 89px;
+            transform: translate(-100%, -80%);
+            background: url('../img/vector-4.png') no-repeat;
+        }
+    }
+
+    &__buttons {
+        display: none;
+    }
+}

@@ -1,12 +1,21 @@
 .title-h1 {
     font-size: 96px;
-    line-height: 110px;
+    // line-height: 110px;
+    line-height: 1.4em;
     font-weight: 400;
     color: #fff;
-    text-shadow: 0 0 10px black;
+    // text-shadow: 0 0 10px black;
     letter-spacing: 0.2px;
     padding: 0;
     margin: 0;
+
+    @media (max-width: $brekpoint_1) {
+        font-size: 86px;
+    }
+
+    @media (max-width: $brekpoint_2) {
+        font-size: 36px;
+    }
 }
 
 .title-h2 {
