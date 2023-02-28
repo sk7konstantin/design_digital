@@ -1,8 +1,15 @@
 .hero {
 
     &__container {
-        background-color: rgba(73, 142, 245, 0.4); // TEMP VALUE
-        margin: 153px 56px 0 56px;
+        // background-color: rgba(73, 142, 245, 0.4); // TEMP VALUE
+        margin-top: 150px;
+        // margin: 153px 15px 0 50px;
+
+        @media (max-width: $brekpoint_2) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
     }
     
     &__title {
@@ -16,11 +23,21 @@
         color: #fff;
         padding: 0;
         margin: 0 0 71px 0;
+
+        @media (max-width: $brekpoint_2) {
+            font-size: 15px;
+            text-align: center;
+        }
     }
 
     &__buttons {
         display: flex;
         gap: 24px;
+
+        @media (max-width: $brekpoint_2) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__button {
@@ -35,6 +52,11 @@
         &-order {
             background-color: $dark-green;
             border-color: $dark-green;
+        }
+
+        @media (max-width: $brekpoint_2) {
+            font-size: 18px;
+            padding: 15px 35px;
         }
     }
 }
