@@ -1,6 +1,8 @@
 body {
     font-family: "Ubuntu", "Arial", sans-serif;
     font-size: 15px;
+    overflow-x: hidden;
+    min-height: 570px;
 }
 
 * {
@@ -26,8 +28,10 @@ a {
 
 .container {
     max-width: 1278px;
-    padding: 0 20px;
     margin: 0 auto;
+    padding: 0 55px;
 
-    
+    @media (max-width: $brekpoint_2) {
+        padding: 0 20px;
+    }
 }
