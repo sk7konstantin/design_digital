@@ -1,19 +1,20 @@
 .page {
     display: grid;
     grid-template-rows: min-content 1fr min-content;
-    height: 100vh;
+    // min-height: 568px;
 }
 
 .background {
-    height: 100vh;
+    min-height: 100vh;
     background-image: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23, 26, 28, 0.4) 50.28%, rgba(0,0,0,0.4) 100%),
                         url('../img/bg_hero.jpg');
     background-repeat: no-repeat, no-repeat;
     background-size: cover, cover;
-    background-position: 50% 0, 50% 0;
+    background-position: 50% 0, 40% 0;
     mix-blend-mode: normal;
     
     &--other {
-        background-image: url('../img/bg_other.png');
+        background-image: radial-gradient(45.97% 54.43% at 50% 45.57%, rgba(23, 26, 28, 0.4) 50.28%, rgba(0,0,0,0.4) 100%),
+                    url('../img/bg_other.png');
     }
 }

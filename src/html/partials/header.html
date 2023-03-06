@@ -1,15 +1,8 @@
 <header class="header">
-  <div class="container">
+  <!-- <div class="container"> -->
     <div class="header__container">
 
-      <!-- <div class="header__logo logo"> -->
-        <!-- <a class="header__link logo__link-img" href="#"> -->
         <a class="header__logo" href="#">
-          <!-- <picture> -->
-          <!-- <source media="min-width: 1000px" srcset="img/logo.svg"> -->
-          <!-- <img src="img/logo.svg" alt="Логотип" width="28" height="28">
-             -->
-          <!-- </picture> -->
           <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_599_62)">
               <path
@@ -36,8 +29,6 @@
           </svg>
           <span>Digital Planet</span>
         </a>
-        <!-- <a class="header__link logo__link-text" href="">Digital Planet</a> -->
-      <!-- </div> -->
 
       {% include './nav.html' %}
 
@@ -52,13 +43,23 @@
         </p>
         <ul class="header__social">
           <li class="header__social-item">
-            <a href="#" class="header__social-link header__social-link--fb"><span>facebook</span></a>
+            <a href="#" class="header__social-link header__social-link--fb">
+              <!-- <span>facebook</span> -->
+              <svg width="32" height="32">
+                <use xlink:href="#icon-fb"></use>
+              </svg>
+            </a>
           </li>
           <li class="header__social-item">
-            <a href="#" class="header__social-link header__social-link--vk"><span>vkontanke</span></a>
+            <a href="#" class="header__social-link header__social-link--vk">
+              <!-- <span>vkontanke</span> -->
+              <svg width="32" height="32">
+                <use xlink:href="#icon-vk"></use>
+              </svg>
+            </a>
           </li>
         </ul>
       </div>
     </div>
-  </div>
+  <!-- </div> -->
 </header>
