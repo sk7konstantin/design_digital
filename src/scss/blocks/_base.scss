@@ -1,8 +1,16 @@
 body {
     font-family: "Ubuntu", "Arial", sans-serif;
     font-size: 15px;
+    overflow: auto;
     overflow-x: hidden;
-    min-height: 570px;
+    // min-height: 570px;
+    min-height: 100vh;
+}
+
+/* Стиль применяется после того как нажата кнопка бургера меню */
+.body--active {
+    height: 100vh;
+    overflow: hidden;
 }
 
 * {
@@ -27,11 +35,13 @@ a {
 }
 
 .container {
-    max-width: 1278px;
+    max-width: 1238px;
     margin: 0 auto;
-    padding: 0 55px;
+    padding-left: $container-padding-left;
+    padding-right: 44px;
+    // padding: 0 20px 0 55px;
 
     @media (max-width: $brekpoint_2) {
-        padding: 0 20px;
+        padding: 0 15px;
     }
 }

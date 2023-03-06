@@ -25,5 +25,10 @@
     color: #fff;
     margin: 0;
     padding: 0;
-    background-color: rgba(23, 20, 187, 0.3); // TMP VALUE
+    // background-color: rgba(23, 20, 187, 0.3); // TMP VALUE
+
+    @media (max-width: $brekpoint_2) {
+        font-size: 28px;
+        line-height: 32px;
+    }
 }

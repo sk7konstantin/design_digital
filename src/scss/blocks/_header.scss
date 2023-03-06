@@ -74,7 +74,7 @@
         font-size: 16px;
         transition: left 0.55s cubic-bezier(.44,2.5,.7,.26) 0.35s;
         opacity: 0;
-        z-index: 1;
+        z-index: 2;
 
         &--active {
             display: block;
@@ -86,10 +86,6 @@
 
     &__social {
         display: flex;
-    }
-
-    &--mobile {
-
     }
 }
 
