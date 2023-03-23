@@ -95,16 +95,17 @@
         }
 
         @media (max-width: $brekpoint_1) {
-            position: absolute;
-            transform: translateX(-5000px);
+            display: none;
+            // position: absolute;
+            // transform: translateX(-5000px);
 
             &--active {
+                position: absolute;
+                top: 105px;
+                left: 20px;
                 display: flex;
                 flex-direction: column;
                 row-gap: 35px;
-                position: absolute;
-                left: 20px;
-                top: 105px;
                 transform: translateX(0);
             }
         }
@@ -137,20 +138,20 @@
         }
 
         
-        @media (max-width: $brekpoint_1) {
-            transform: translateX(-1000px);
-            transition: all 0.35s cubic-bezier(.55,1.24,.8,1.43) 0.35s;            
-        }
+        // @media (max-width: $brekpoint_1) {
+            // transform: translateX(-1000px);
+            // transition: all 0.35s cubic-bezier(.55,1.24,.8,1.43) 0.35s;            
+        // }
 
-        @for $i from 0 to 7 {
-            &:nth-child(#{$i}) {
-                transition-delay: 0.10s*$i;
-            }
-        }
+        // @for $i from 0 to 7 {
+        //     &:nth-child(#{$i}) {
+        //         transition-delay: 0.10s*$i;
+        //     }
+        // }
 
-        &--active {
-            transform: translateX(0px);
-        }
+        // &--active {
+        //     transform: translateX(0px);
+        // }
     }
 
     &__item:has(~ .navigation__item) {
@@ -188,8 +189,8 @@
             right: 0;
             width: 0;
             height: 0;
-            background-color: rgba(0,0,0,0.9);
-            transition: width 0.35s ease, height 0.35s ease;
+            background-color: rgba(0,0,0,0.95);
+            // transition: width 0.35s ease, height 0.35s ease;
         }
         
         &::after {
@@ -198,10 +199,10 @@
             top: 400px;
             right: 0;
             height: 0px;
-            width: 0;
+            width: 0px;
             border-bottom: 1px solid #fff;
             opacity: 0;
-            transition: width 0.2s ease 0.2s;
+            // transition: width 0.2s ease 0.2s;
         }
     }
 

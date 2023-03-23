@@ -1,0 +1,66 @@
+{% extends 'html/layouts/default.html' %}
+
+{% block main %}
+<section class="contacts">
+    <div class="container">
+        <h1 class="contacts__title title-h2">Контакты</h1>
+        <div class="contacts__wrapper">
+            <ul class="contacts__list">
+                <li class="contacts__item">
+                    <p class="contacts__item-text contacts__item-city">Новороссийск</p>
+                    <p class="contacts__item-text">
+                        <a href="tel:+79234650141" class="contacts__item-link">+7 (923) 465 – 01 – 41</a>
+                    </p>
+                    <p class="contacts__item-text">
+                        <a href="mailto:digitalPlanetNR@mail.ru" class="contacts__item-link">digitalPlanetNR@mail.ru</a>
+                    </p>
+                </li>
+                <li class="contacts__item">
+                    <p class="contacts__item-text contacts__item-city">Москва</p>
+                    <p class="contacts__item-text">
+                        <a href="tel:+74958552419" class="contacts__item-link">+7 (495) 855 – 24 – 19</a>
+                    </p>
+                    <p class="contacts__item-text">
+                        <a href="mailto:digitalPlanetMoscow@mail.ru" class="contacts__item-link">digitalPlanetMoscow@mail.ru</a>
+                    </p>
+                </li>
+                <li class="contacts__item">
+                    <p class="contacts__item-text contacts__item-city">Саратов</p>
+                    <p class="contacts__item-text">
+                        <a href="tel:+79422212178" class="contacts__item-link">+7 (942) 221 – 21 – 78</a>
+                    </p>
+                    <p class="contacts__item-text">
+                        <a href="mailto:digitalPlanetSaratov@mail.ru" class="contacts__item-link">digitalPlanetSaratov@mail.ru</a>
+                    </p>
+                </li>
+            </ul>
+
+            <div class="contacts__form">
+                <form action="" method="POST">
+                    <h2 class="contacts__form-title">Остались вопросы? Задайте их нам!</h2>
+                    <p class="contacts__form-subtitle">Мы обязательно свяжемся с вами в течение двух рабочих дней</p>
+                    
+                    <div class="contacts__form-container">
+                        <div class="contacts__form-field">
+                            <label for="name" class="visually-hidden">Ваше имя</label>
+                            <input type="text" id="name" placeholder="Ваше имя" required>
+                        </div>
+                        
+                        <div class="contacts__form-field">
+                            <label for="email" class="visually-hidden">Ваш email</label>
+                            <input type="email" id="email" placeholder="Ваш email" required>
+                        </div>
+    
+                        <div class="contacts__form-textarea">
+                            <label for="question" class="visually-hidden">Что вас интересует?</label>
+                            <textarea id="question" placeholder="Что вас интересует?" required></textarea>
+                        </div>
+
+                        <button class="button contacts__form-button" type="submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
