@@ -10,19 +10,28 @@
 
     <h2 class="explanation__title title-h2">Как это работает?</h2>
 
-    <div class="explanation__wrapper">
+    <!-- <div class="explanation__wrapper"> -->
       <div class="explanation__slider slider">
 
         <ul class="slider__box explanation__list">
 
           <li class="slider__item explanation__item card">
+            <!-- <svg class="svg_1" style="position: absolute; z-index:2; top: -100">
+              <g>
+                <path 
+                  d="M 20 60 Q 45 10 85 90" 
+                  fill="transparent"
+                  stroke="rgba(255, 0, 0, 0.9)"
+                  stroke-width="3"></path>
+              </g>
+            </svg> -->
             <div class="card__img card__img--1">
               <img src="img/how_work_1.png" alt="Картинка 1" >
             </div>
-            <div>
+            <div class="card__text explanation__info">
               <h3 class="slider__item-title card__title">Готовим инвентарь</h3>
               <p class="slider__item-description card__description">Наши специалисты готовят каждые
-                VR-очки к использованию, обрабатываяустройства специальным средством для ухода после каждого сеанса.</p>
+                VR-очки к использованию, обрабатывая устройства специальным средством для ухода после каждого сеанса.</p>
             </div>
           </li>
 
@@ -30,7 +39,7 @@
             <div class="card__img card__img--2">
               <img src="img/how_work_2.png" alt="Картинка 2">
             </div>
-            <div>
+            <div class="card__text explanation__info">
               <h3 class="slider__item-title card__title">Выбираем фильм</h3>
               <p class="slider__item-description card__description">В нашем архиве есть образовательные фильмы по теме космоса, астрологиии
                 обществознания. Мы работаем с самымкрупным производителем мультимедиа продуктов в РФ.</p>
@@ -41,7 +50,7 @@
             <div class="card__img card__img--3">
               <img src="img/how_work_3.png" alt="Картинка 3">
             </div>
-            <div>
+            <div class="card__text explanation__info">
               <h3 class="slider__item-title card__title">Надеваем VR-очки</h3>
               <p class="slider__item-description card__description">Ученики получают VR-очки, наш техникпомогает им разобраться как
                 правильнонадеть
@@ -54,7 +63,7 @@
             <div class="card__img card__img--4">
               <img src="img/how_work_4.png" alt="Картинка 4">
             </div>
-            <div>
+            <div class="card__text explanation__info">
               <h3 class="slider__item-title card__title">Исследуем галактики!</h3>
               <p class="slider__item-description card__description">Ребята окунаются в виртуальные миры
                 и с удовольтсием изучают всё вокруг.
@@ -63,8 +72,13 @@
               </div>
           </li>
         </ul>
+
+        <div class="explanation__buttons slider__buttons">
+          <button class="slider__button slider__button--prev">Назад</button>
+          <button class="slider__button slider__button--next">Вперед</button>
       </div>
-    </div>
+      </div>
+    <!-- </div> -->
   </div>
 </section>
 {% endblock %}

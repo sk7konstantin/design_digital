@@ -1,12 +1,23 @@
 .slider {
+    position: relative;
+    overflow: hidden;
 
     &__box {
+        position: relative;
         display: flex;
-        flex-wrap: wrap;
-        font-size: 15px;
-        line-height: 19.5px;
-        font-weight: 300;
-        color: #fff;
+        // flex-wrap: nowrap;
+        // max-width: 560px;
+        box-sizing: content-box;
+        // scroll-snap-type: x mandatory; //под вопросом
+    }
+
+    &__item {
+        position: relative;
+        // scroll-snap-align: start; //под вопросом
+
+        img {
+            pointer-events: none;
+        }
     }
 
     &__item-title {
@@ -55,4 +66,10 @@
             opacity: 0.85;
         }
     }
+}
+
+.disabled {
+    // display: block;
+    pointer-events: none;
+    opacity: 0.5;
 }

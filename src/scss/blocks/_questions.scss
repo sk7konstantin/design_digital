@@ -1,0 +1,148 @@
+.questions {
+    margin-top: 5%;
+    color: #1C1C1C;
+
+    &__list {
+        width: clamp(300px, 76.5%, 900px);
+        margin-top: 40px;
+
+        @media (max-width: $brekpoint_2) {
+            width: 100%;
+        }
+    }
+
+    &__item {
+        display: grid;
+        grid-template-columns: 1fr 67px;
+        background-color: #fff;
+        padding: 0;
+
+        &:has(+ .questions__item) {
+            margin-bottom: 5px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            box-shadow: 0 0 10px 0 $light-green;
+        }
+
+        @media (max-width: $brekpoint_2) {
+            grid-template-columns: 1fr 32px;
+            padding-left: 8px;
+        }
+    }
+
+    &__question {
+        position: relative;
+        font-weight: 500;
+        font-size: 21px;
+        line-height: 28px;
+        margin: 0;
+        margin-left: 39px;
+        padding-top: 19px;
+        padding-bottom: 22px;
+        opacity: 0.8;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -20px;
+            transform: translateY(-50%);
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: $light-green;
+        }
+
+        @media (max-width: $brekpoint_2) {
+            font-size: 17px;
+            line-height: 132%;
+            margin-left: 0;
+            padding-top: 10px;
+            padding-bottom: 10px;
+
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    &__answer {
+        margin: 0;
+        padding: 0;
+        margin-left: 50px;
+        height: 0;
+        overflow: hidden;
+        width: 76%;
+        line-height: 150%;
+        transition: all 0.45s ease;
+
+        &:has(~ input:checked) {
+            height: min-content;
+            margin-bottom: 30px;
+        }
+
+        @media (max-width: $brekpoint_2) {
+            width: 90%;
+            margin-left: 0;
+        }
+    }
+
+    &__button {
+        position: relative;
+        background-color: $light-green;
+        border: none;
+
+        &::after,
+        &::before {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 2px;
+            background-color: #ffffff;
+            left: 22px;
+            top: 50%;
+            transform: translateY(-25%);
+            transition: all 0.3s ease;
+        }
+
+        &::after {
+            width: 2px;
+            height: 24px;
+            left: 33px;
+            transform: translateY(-50%);
+        }
+
+        &:has(~ input:checked) {
+
+            &::before,
+            &::after {
+                transform: rotate(45deg) translateY(-25%);
+            }
+
+            &::after {
+                transform: rotate(45deg) translate(-7px, -8px);
+            }
+
+            @media (max-width: $brekpoint_2) {
+                &::after {
+                    transform: rotate(45deg) translate(-5px, -6px);
+                }
+            }
+        }
+
+        @media (max-width: $brekpoint_2 ) {
+
+            &::before {
+                width: 16px;
+                left: 8px;
+            }
+
+            &::after {
+                height: 16px;
+                left: 15px;
+            }
+        }
+    }
+}
