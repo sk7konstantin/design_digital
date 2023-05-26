@@ -1,19 +1,27 @@
 .slider {
     position: relative;
     overflow: hidden;
+    list-style: none;
+    padding: 0;
 
-    &__box {
+    &__wrapper {
         position: relative;
         display: flex;
-        // flex-wrap: nowrap;
-        // max-width: 560px;
         box-sizing: content-box;
-        // scroll-snap-type: x mandatory; //под вопросом
+        // transform: translate3d(0, 0,0);
+        width: 100%;
+        height: 100%;
+        transition: transform 0.3s ease;
     }
 
     &__item {
         position: relative;
-        // scroll-snap-align: start; //под вопросом
+        // width: 100%;
+        // height: 100%;
+        // position: relative;
+        // transition-property: transform;
+        // transition-property: transform;
+        flex-shrink: 0;
 
         img {
             pointer-events: none;
@@ -33,8 +41,21 @@
         margin: 0;
     }
 
+    &__controls {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        column-gap: 21px;
+    }
+
+    &__pagination {
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 500;
+        opacity: 0.87;
+    }
+
     &__buttons {
-        margin-left: auto;
         font-size: 0;
     }
 

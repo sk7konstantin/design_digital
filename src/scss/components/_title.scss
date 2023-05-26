@@ -20,12 +20,16 @@
 }
 
 .title-h2 {
+    position: relative;
+    display: inline-block;
     font-size: 44px;
     font-weight: 500;
     line-height: 51px;
     color: #fff;
+    border-bottom: 3px solid $light-green;
     margin: 0;
     padding: 0;
+    padding-right: 30px;
     // background-color: rgba(23, 20, 187, 0.3); // TMP VALUE
 
     @media (max-width: $brekpoint_2) {
@@ -39,6 +43,10 @@
 .text__word {
     display: inline-block;
     margin-right: 25px;
+
+    @media (max-width: $brekpoint_2) {
+        margin-right: 10px;
+    }
 }
 
 .text__word > span {

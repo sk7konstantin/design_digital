@@ -18,6 +18,11 @@ body {
     box-sizing: border-box;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -38,7 +43,7 @@ a {
 .container {
     max-width: 1238px;
     margin: 0 auto;
-    padding-left: $container-padding-left;
+    padding-left: 26px;
     padding-right: 44px;
     // padding: 0 20px 0 55px;
 

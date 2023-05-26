@@ -190,7 +190,15 @@
         }
     }
 
-    &__buttons {
+    &__controls {
         display: none;
+
+        @media (max-width: $brekpoint_1) {
+            display: flex;
+        }
     }
+
+    // &__buttons {
+    //     display: none;
+    // }
 }
