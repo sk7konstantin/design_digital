@@ -3,20 +3,42 @@
     <button type="button" class="navigation__button-menu navigation__button-menu--mobile"><span>Меню</span></button>
 
     <ul class="navigation__list">
-        <li class="navigation__item navigation__item--intro">
+        <li class="{{'navigation__item navigation__item--intro' if link_page == 'Product' else 'navigation__item' }}">
+            {% if link_page == 'Product' %}
+            <span>О продукте</span>
+            {% else%}
             <a class="header__link" href="product.html">О продукте</a>
+            {% endif %}
         </li>
-        <li class="navigation__item">
+        <li
+            class="{{'navigation__item navigation__item--intro' if link_page == 'Explanation' else 'navigation__item' }}">
+            {% if link_page == 'Explanation' %}
+            <span>Как работает</span>
+            {% else%}
             <a class="header__link" href="explanation.html">Как работает</a>
+            {% endif %}
         </li>
-        <li class="navigation__item">
-            <a class="navigation__link" href="technology.html">Технология</a>
+        <li
+            class="{{'navigation__item navigation__item--intro' if link_page == 'Technology' else 'navigation__item' }}">
+            {% if link_page == 'Technology' %}
+            <span>Технология</span>
+            {% else%}
+            <a class="header__link" href="technology.html">Технология</a>
+            {% endif %}
         </li>
-        <li class="navigation__item">
-            <a class="navigation__link" href="questions.html">Вопросы</a>
+        <li class="{{'navigation__item navigation__item--intro' if link_page == 'Questions' else 'navigation__item' }}">
+            {% if link_page == 'Questions' %}
+            <span>Вопросы</span>
+            {% else%}
+            <a class="header__link" href="questions.html">Вопросы</a>
+            {% endif %}
         </li>
-        <li class="navigation__item">
-            <a class="navigation__link" href="contacts.html">Контакты</a>
+        <li class="{{'navigation__item navigation__item--intro' if link_page == 'Contacts' else 'navigation__item' }}">
+            {% if link_page == 'Contacts' %}
+            <span>Контакты</span>
+            {% else%}
+            <a class="header__link" href="contacts.html">Контакты</a>
+            {% endif %}
         </li>
     </ul>
 </nav>

@@ -1,95 +1,57 @@
 let slider = document.querySelector('.slider'),
-    sliderList = document.querySelector('.slider__box'),
+    sliderList = document.querySelector('.slider__wrapper'),
     sliderItems = document.querySelectorAll('.slider__item'),
     arrow = document.querySelector('.slider__buttons'),
     buttons = document.querySelectorAll('.slider__button'),
     slides = document.querySelectorAll('.slider__item'),
     prev = buttons[0],
     next = buttons[1],
-    slideWidth = slides[0].offsetWidth,
-    slideIndex = 0,
-    posInit = 0,
-    posX1 = 0,
-    posX2 = 0,
-    posFinal = 0,
-    posThreshold = slideWidth * .10,
-    trfRegExp = /[-0-9.]+(?=px)/,
+    paginationCurrent = document.querySelector('.slider__pagination-current'),
+    paginationTotal = document.querySelector('.slider__pagination-total');
 
-    slide = function () {
-        sliderList.style.transition = 'transform .5s';
-        sliderList.style.transform = `translate3d(-${slideIndex * slideWidth}px, 0px, 0px)`;
+let width = slides[0].getBoundingClientRect().width;
+let countSlides = 1;
 
-        prev.classList.toggle('disabled', slideIndex === 0);
-        next.classList.toggle('disabled', slideIndex === --slides.length);
-        console.log(slideWidth)
-    },
-    getEvent = () => event.type.search('touch') !== -1 ? event.type.touches[0]: event,
+let position = 0;
 
-    swipeStart = function() {
-        let evt = getEvent();
-        posInit = posX1 = evt.clientX;
-        sliderList.style.transition = '';
+// Меняем значение элемента в верстке на кол-во слайдов
+paginationTotal.innerHTML = slides.length;
 
-        document.addEventListener('touchmove', swipeAction);
-        document.addEventListener('touchend', swipeEnd);
-        document.addEventListener('mousemove', swipeAction);
-        document.addEventListener('mouseup', swipeEnd);
-    },
+// Устанавливаем кнопку назад в состояние disabled
+if (paginationCurrent.textContent == 1) {
+    prev.classList.add('disabled');
+}
 
-    swipeAction = function() {
-        let evt = getEvent(),
-        style = sliderList.style.transform,
-        transform = +style.match(trfRegExp)[0];
+prev.addEventListener('click', function(event) {
+    let count = parseInt(paginationCurrent.textContent) - 1
+    paginationCurrent.innerHTML = count;
 
-        posX2 = posX1 - evt.clientX;
-        posX1 = evt.clientX;
-
-        sliderList.style.transform = `translate3d(${transform - posX2}px, 0px, 0px)`;
-    },
-
-    swipeEnd = function() {
-        posFinal = posInit - posX1;
-
-        document.removeEventListener('touchmove', swipeAction);
-        document.removeEventListener('mousemove', swipeAction);
-        document.removeEventListener('touchend', swipeEnd);
-        document.removeEventListener('mouseup', swipeEnd);
-
-        if (Math.abs(posFinal) > posThreshold) {
-            if (posInit < posX1) {
-                slideIndex--;
-            } else if (posInit > posX1) {
-                slideIndex++;
-            }
-        }
-
-        if (posInit !== posX1) {
-            slide();
-        }
+    if (count != slides.length) {
+        next.classList.remove('disabled');
+    }
+    if (count == 1) {
+        prev.classList.add('disabled');
     }
 
-sliderList.style.transform = 'translate3d(0px,0px,0px)';
+    position += width * countSlides;
+    position = Math.min(position, 0);
 
-// slider.addEventListener('touchstart', swipeStart);
+    sliderList.style.transform = `translate3d(${position}px, 0, 0)`;
+})
 
-slider.addEventListener('mousedown', swipeStart);
-slider.addEventListener('touchstart', swipeStart);
+next.addEventListener('click', function(event) {
+    let count = parseInt(paginationCurrent.textContent) + 1
+    paginationCurrent.innerHTML = count;
 
-prev.addEventListener('click', () => {
-    slideIndex -= 1;
-    sliderList.style.transform = `translate3d(${slideWidth * (slideIndex)}px, 0px, 0px)`;
-});
-
-arrow.addEventListener('click', function() {
-    let target = event.target;
-
-    if (target === next) {
-        slideIndex++;
-    } else if (target === prev) {
-        slideIndex--;
-    } else {
-        return;
+    if (count != 1) {
+        prev.classList.remove('disabled');
+    }
+    if (count == slides.length) {
+        next.classList.add('disabled')
     }
 
-    slide()
-});
+    position -= width*countSlides;
+    position = Math.max(position, -width*(sliderItems.length - countSlides));
+
+    sliderList.style.transform = `translate3d(${position}px, 0, 0)`;
+})

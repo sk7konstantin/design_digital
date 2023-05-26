@@ -2,7 +2,7 @@
     // position: relative;
     margin: auto 0;
     width: 51%;
-    
+
     &__button-menu {
         display: none;
         z-index: 1;
@@ -15,7 +15,7 @@
             opacity: 0.5;
             border: none;
             transition: opacity 0.4s ease;
-            
+
             &::before {
                 content: '';
                 position: absolute;
@@ -28,7 +28,7 @@
                 transform-origin: left top;
                 transition: width 0.25s ease-in-out, transform 0.2s ease-out;
             }
-            
+
             &::after {
                 content: '';
                 position: absolute;
@@ -63,7 +63,7 @@
                 transition: transform 0.25s ease-in;
             }
         }
-        
+
         @media (max-width: $brekpoint_1) {
             display: block;
 
@@ -72,7 +72,7 @@
                 span {
                     transform: scale(0);
                 }
-    
+
                 &::before {
                     transform: rotate(45deg);
                     width: 100%;
@@ -88,8 +88,8 @@
 
     &__list {
         display: flex;
-        flex-wrap: wrap;  
-        
+        flex-wrap: wrap;
+
         @media (max-width: 1247px) {
             row-gap: 10px;
         }
@@ -123,7 +123,7 @@
             width: 0;
             height: 2px;
             background-color: $light-green;
-            transition: all 0.35s cubic-bezier(.55,1.24,.8,1.43);
+            transition: all 0.35s cubic-bezier(.55, 1.24, .8, 1.43);
         }
 
         &:hover::before {
@@ -137,10 +137,23 @@
             text-decoration: none;
         }
 
-        
+        &--intro {
+            span {
+                color: $light-green;
+                font-weight: 500;
+                text-transform: uppercase;
+            }
+            &:hover {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+
+
         // @media (max-width: $brekpoint_1) {
-            // transform: translateX(-1000px);
-            // transition: all 0.35s cubic-bezier(.55,1.24,.8,1.43) 0.35s;            
+        // transform: translateX(-1000px);
+        // transition: all 0.35s cubic-bezier(.55,1.24,.8,1.43) 0.35s;            
         // }
 
         // @for $i from 0 to 7 {
@@ -172,6 +185,7 @@
 
         @media (max-width: $brekpoint_1) {
             margin: 0;
+
             &::after {
                 display: none;
             }
@@ -189,10 +203,10 @@
             right: 0;
             width: 0;
             height: 0;
-            background-color: rgba(0,0,0,0.95);
+            background-color: rgba(0, 0, 0, 0.95);
             // transition: width 0.35s ease, height 0.35s ease;
         }
-        
+
         &::after {
             content: '';
             position: absolute;

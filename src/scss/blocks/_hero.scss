@@ -1,9 +1,32 @@
 .hero {
+    &::after {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 430px;
+        height: 350px;
+        background: url('../img/kid_VR.png') no-repeat;
+        background-size: cover;
+    }
+
+    @media (max-width: $brekpoint_1) {
+        &::after {
+            width: 380px;
+            height: 300px;
+        }
+    }
+
+    @media (max-width: $brekpoint_2) {
+        &::after {
+            display: none;
+        }
+    }
 
     &__container {
-        // background-color: rgba(73, 142, 245, 0.4); // TEMP VALUE
-        margin-top: 150px;
-        // margin: 153px 15px 0 50px;
+        // margin-top: 150px;
+        margin: 11% auto 0;
+        padding-left: 77px;
 
         @media (max-width: $brekpoint_2) {
             display: flex;

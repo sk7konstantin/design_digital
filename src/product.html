@@ -26,23 +26,35 @@
                     <p class="slider__title product__slider-title">Что показываем в планетарии</p>
                     
                     <div class="slider">
-                        <ul class="slider__box product__box">
-                            <li class="slider__item product__item">
-                                <img class="product__slide-img" src="img/2_slider.png" alt="Фото в слайдере">
+                        <ul class="slider__wrapper product__slider-list">
+                            <li class="product__slide slider__item">
+                                <div class="product__slide-wrapper">
+                                    <img class="product__slide-image" src="img/2_slider.png" width="562" height="300" alt="Фото в слайдере">
+                                </div>
                             </li>
-                            <li class="slider__item product__item">
-                                <img class="product__slide-img" src="img/2_slider.png" alt="Фото в слайдере">
+                            <li class="product__slide slider__item">
+                                <div class="product__slide-wrapper">
+                                    <img class="product__slide-image" src="img/2_slider.png" width="562" height="300" alt="Фото в слайдере">
+                                </div>
                             </li>
                         </ul>
     
-                        <div class="slider__buttons">
-                            <button class="slider__button slider__button--prev">Назад</button>
-                            <button class="slider__button slider__button--next">Вперед</button>
+                        <div class="slider__controls">
+                            <div class="slider__pagination">
+                                <span class="slider__pagination-current">1</span>
+                                /
+                                <span class="slider__pagination-total">2</span>
+                            </div>
+                            <div class="slider__buttons">
+                                <button class="slider__button slider__button--prev">Назад</button>
+                                <button class="slider__button slider__button--next">Вперед</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
 </section>
 {% endblock %}
